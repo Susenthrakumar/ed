@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    }
+
+
+    
+/* Left Div (Upcoming Events and Announcements) */
+.left-div {
+    width: 50%; /* Left div width reduced to 30% */
+    padding: 20px;
+    margin-left: -80px;
+}
+
+.left-div .upcoming-events{
+    margin-top: -30px;
+}
+
+.left-div .announcements {
+    margin-bottom: 20px;
+}
+
+.left-div h3 {
+    color: rgb(0, 34, 145);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+
+/* Right Div (Subjects Offered) */
+.right-div table {
+    width: 110%; /* Adjust table width */
+    height: 50%;
+    margin: 0 auto; /* Center the table */
+    text-align: center; /* Center-align content inside table */
+    margin-top: -10px;
+    margin-left: -20px;
+}
+
+.right-div table td {
+    padding: 10px; /* Space inside cells */
+    vertical-align: top; /* Align content to the top */
+    width: 25%; /* Ensure 4 cells per row */
+    position: relative; /* For positioning the image and text */
+}
+
+.image-container {
+    position: relative; /* Container for image and caption */
+    text-align: center; /* Center-align content */
+    
+}
+
+.image-container::before {
+    content: ""; /* Creates a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensures the overlay is behind the text */
+}
+
+.image-container p {
+    position: absolute; /* Position the text inside the image */
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Adjust positioning */
+    font-size: 18px; /* Caption font size */
+    font-weight: 600; /* Bold captions */
+    color: rgb(233, 231, 231); /* White color for text */
+    z-index: 1; /* Ensure text is above the overlay */
+}
+
+.right-div table td img {
+    width: 100%; /* Image fills the cell */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensure proportional scaling */
+    border-radius: 10px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for transform and filter */
+    filter: brightness(50%); /* Reduced brightness */
+    z-index: 0; /* Stack images below text */
+    position: relative; /* Ensure hover effects are within the image */
+    cursor: pointer; /* Indicates the image is clickable */
+}
+
+.right-div table td img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    filter: brightness(60%); /* Slightly lighter on hover */
+    z-index: 1; /* Bring the image above the text */
+}
+
+.right-div {
+    text-align: center; /* Centers the text in the container */
+    margin: 20px auto; /* Centers the container itself */
+}
+
+.right-div h1 {
+
+    font-size: 40px; /* Adjust font size */
+    font-weight: 700; /* Bold font */
+    margin-top: -20px;
+    color: #333; /* Text color */
+    margin-bottom: 25px; /* Space below the heading */
+    margin-right: -50px;
+    margin-left: 0px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+.right-div h1:hover {
+    color: #d81b60; /* Change text color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Card Styling for Events and Announcements */
+.card.custom-card {
+    margin-top: 0px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50%; /* This ensures the card takes up the full width of its container */
+    max-width: 200px; /* Adjust this max width for the ideal card width */
+    margin-left: 100px;
+    margin-right: -50px; /* Center the card horizontally */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4); 
+}
+
+.card.custom-card:hover {
+    transform: translateY(-10px); /* Slightly lift the card */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4); 
+}
+
+/* Marquee for Events */
+.event-marquee {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text from wrapping inside the marquee */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; 
+}
+
+/* Card Header Styling */
+.card-header.custom-card-header {
+    background-color: #f5f5f5;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    color: #333;
+}
+
+/* Announcements Styling */
+.card-body.d-flex {
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.card-body.d-flex p {
+    display: flex;
+    align-items: center;
+}
+
+.card-body.d-flex i {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .left-div, .right-div {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .card.custom-card {
+        max-width: 100%; /* Allow the card to take up full width */
+    }
+}
+
+
+
+
+
+
+
+/* Card Styling for Events and Announcements */
+.card.custom-card {
+    margin-top: 0px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* This ensures the card takes up the full width of its container */
+    max-width: 310px; /* Adjust this max width for the ideal card width */
+    margin-left: 0px;
+    margin-right: -80px; /* Center the card horizontally */
+}
+
+
+
+/* Marquee for Events */
+.event-marquee {
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text from wrapping inside the marquee */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; 
+}
+
+/* Card Header Styling */
+.card-header.custom-card-header {
+    background-color: rgb(0, 34, 145);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    color: white;
+}
+
+/* Announcements Styling */
+.card-body.d-flex {
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    margin-right: 0px;
+}
+
+.card-body.d-flex p {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.card-body.d-flex i {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card.custom-card {
+        max-width: 90%; /* Allow the card to take up most of the screen width on smaller devices */
+    }
+}
+
+

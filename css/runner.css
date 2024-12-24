@@ -1,0 +1,33 @@
+
+    .stats-section {
+        background: #e8e9e9; /* Dark background */
+        color: black;
+        text-align: center;
+        padding: 40px 20px;
+      }
+          
+      .stats-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+      .stat-box {
+        text-align: center;
+        margin-right: 10px;
+      }
+      .stat-box i {
+        font-size: 50px;
+        color: rgb(0, 34, 145); /* Accent color for icons */
+      }
+      .stat-number {
+        font-size: 36px;
+        font-weight: bold;
+        color:rgb(0, 34, 145);
+        margin: 10px 0;
+      }
+      .stat-label {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
